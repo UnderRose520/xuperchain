@@ -28,6 +28,11 @@ if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
 
+
+import htmlToPdf from '@/utils/htmlToPdf'
+// 使用Vue.use()方法就会调用工具方法中的install方法
+Vue.use(htmlToPdf)
+
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明

@@ -42,7 +42,6 @@ export const constantRoutes = [
     component: () => import('@/views/404'),
     hidden: true
   },
-
   {
     path: '/',
     component: Layout,
@@ -51,111 +50,127 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '商品房预售办理系统', icon: 'dashboard', affix: true, noCache: false }
     }]
   },
-
   {
-    path: '/example',
+    path: '/police',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
+    redirect: '/police/index',
+    //  name: 'Police',
+    meta: { title: '公安局', icon: 'nested' },
     children: [
       {
         path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        name: 'index1',
+        component: () => import('@/views/police/index'),
+        meta: { title: '证件检索', icon: 'table' }
+      },
+      {
+        path: 'police',
+        name: 'Police',
+        component: () => import('@/views/police/operation'),
+        meta: { title: '证件办理', icon: 'form' }
       }
     ]
   },
-
   {
-    path: '/nested',
+    path: '/business',
     component: Layout,
-    redirect: '/nested/menu1',
-    name: 'Nested',
+    redirect: '/business/index',
+    //   name: 'business',
+    meta: { title: '工商局', icon: 'nested' },
+    children: [
+      {
+        path: 'index',
+        name: 'Index',
+        component: () => import('@/views/business/index'),
+        meta: { title: '证件检索', icon: 'nested' }
+      },
+      {
+        path: 'operation',
+        name: 'operation',
+        component: () => import('@/views/business/operation'),
+        meta: { title: '证件办理', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/housingAuthority',
+    component: Layout,
+    redirect: '/housingAuthority/index',
+    //   name: 'HousingAuthority',
+    meta: { title: '房管局', icon: 'nested' },
+    children: [
+      {
+        path: 'index',
+        name: 'Index2',
+        component: () => import('@/views/housingAuthority/index'),
+        meta: { title: '证件检索', icon: 'nested' }
+      },
+      {
+        path: 'operation',
+        name: 'Operation',
+        component: () => import('@/views/housingAuthority/operation'),
+        meta: { title: '证件办理', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/land',
+    component: Layout,
+    redirect: '/land/index',
+    //  name: 'Index',
     meta: {
-      title: 'Nested',
+      title: '国土资源局',
       icon: 'nested'
     },
     children: [
       {
-        path: 'menu1',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
-          },
-          {
-            path: 'menu1-2',
-            component: () => import('@/views/nested/menu1/menu1-2'),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' }
-              },
-              {
-                path: 'menu1-2-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' }
-              }
-            ]
-          },
-          {
-            path: 'menu1-3',
-            component: () => import('@/views/nested/menu1/menu1-3'),
-            name: 'Menu1-3',
-            meta: { title: 'Menu1-3' }
-          }
-        ]
+        path: 'index',
+        name: 'index',
+        component: () => import('@/views/land/index'),
+        meta: { title: '证件检索', icon: 'nested' }
       },
       {
-        path: 'menu2',
-        component: () => import('@/views/nested/menu2/index'),
-        name: 'Menu2',
-        meta: { title: 'menu2' }
+        path: 'operation',
+        name: 'Operation1',
+        component: () => import('@/views/land/operation'),
+        meta: { title: '证件办理', icon: 'form' }
       }
     ]
   },
-
+  {
+    path: '/urbanRural',
+    component: Layout,
+    redirect: '/urbanRural/index',
+    // name: 'Land',
+    meta: {
+      title: '城乡规划部门',
+      icon: 'nested'
+    },
+    children: [
+      {
+        path: 'index',
+        name: 'index1',
+        component: () => import('@/views/urbanRural/index'),
+        meta: { title: '证件检索', icon: 'nested' }
+      },
+      {
+        path: 'operation',
+        name: 'operation1',
+        component: () => import('@/views/urbanRural/operation'),
+        meta: { title: '证件办理', icon: 'form' }
+      }
+    ]
+  },
   {
     path: 'external-link',
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        path: 'https://xuper.baidu.com/n/xuperdoc/introduction/brief.html',
+        meta: { title: 'xuperchain', icon: 'link' }
       }
     ]
   },

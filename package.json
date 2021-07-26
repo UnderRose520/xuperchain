@@ -1,7 +1,7 @@
 {
   "name": "vue-admin-template",
   "version": "4.4.0",
-  "description": "A vue admin template with Element UI & axios & iconfont & permission control & lint",
+  "description": "A Government affairs system with Element UI & axios & iconfont & permission control & lint",
   "author": "Pan <panfree23@gmail.com>",
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -17,10 +17,13 @@
     "axios": "0.18.1",
     "core-js": "3.6.5",
     "element-ui": "2.13.2",
+    "html2canvas": "^1.1.4",
     "js-cookie": "2.2.0",
+    "jspdf": "^2.3.1",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
     "path-to-regexp": "2.4.0",
+    "qs": "^6.10.1",
     "vue": "2.6.10",
     "vue-router": "3.0.6",
     "vuex": "3.1.0"

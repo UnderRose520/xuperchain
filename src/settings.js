@@ -1,6 +1,5 @@
 module.exports = {
-
-  title: 'Vue Admin Template',
+  title: 'Government affairs system',
 
   /**
    * @type {boolean} true | false
@@ -12,5 +11,12 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: false
+  sidebarLogo: false,
+
+  /**
+   *  @type {boolean} true | false
+   *  @description Whether show the tagsview
+   */
+  tagsView: true
+
 }
