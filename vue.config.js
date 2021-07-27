@@ -36,7 +36,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-	proxy: {
+    proxy: {
 	  [process.env.VUE_APP_BASE_API]: {
 	    target: 'http://41c484d417.zicp.vip',
 	    changeOrigin: true,
@@ -44,7 +44,7 @@ module.exports = {
 	      ['^' + process.env.VUE_APP_BASE_API]: ''
 	    }
 	  }
-	},
+    },
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {

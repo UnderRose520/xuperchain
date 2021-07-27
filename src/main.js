@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-import htmlToPdf from '@/utils/htmlToPdf'
+import htmlToPdf from '@/components/utils/htmlToPdf'
 // 使用Vue.use()方法就会调用工具方法中的install方法
 Vue.use(htmlToPdf)
 
